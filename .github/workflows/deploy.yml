@@ -27,7 +27,7 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          key: ${{ secrets.VPS_KEY }}
           script: |
             docker pull delix07/api-health:latest
             docker stop api-health || true
