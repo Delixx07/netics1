@@ -1,0 +1,35 @@
+name: Deploy API Health
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      - name: Build Docker Image
+        run: docker build -t delix07/api-health:latest .
+
+      - name: Push Docker Image
+        run: docker push delix07/api-health:latest
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_PRIVATE_KEY }}
+          script: |
+            docker pull delix07/api-health:latest
+            docker stop api-health || true
+            docker rm api-health || true
+            docker run -d --name api-health -p 3000:3000 delix07/api-health:latest
