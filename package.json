@@ -11,5 +11,6 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.2"
+    "moment-timezone": "^0.5.40"
   }
 }
