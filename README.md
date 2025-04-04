@@ -42,6 +42,7 @@ Setelah berhasi;, saya mengupload image ke docker hub sebelum digunakan di VPS.
 
 ### 3.3. Setup VPS
 Saya menggunakan layanan VPS dari Azure dan membuat Virtual Machine berbasis Linux (Ubuntu 20.04 LTS) melalui portal Azure. 
+
 <img src="https://github.com/user-attachments/assets/467fc5d7-74db-4c32-8234-bd073ef842b3" width="500">
 
 Setelah VM dibuat, saya mengkonfigurasi akses SSH dan mengatur firewall agar port 3000 dapat diakses secara publik:
