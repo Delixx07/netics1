@@ -3,11 +3,11 @@
 ## 1. Pendahuluan
 **Dokumentasi ini menjelaskan proses implementasi Continuous Integration dan Continuous Deployment (CI/CD) untuk API Health Check menggunakan Docker dan GitHub Actions yang dideploy pada VPS Azure.**
 
-## 2. Arsitektur Sistem
-- **Platform**          : Azure VPS
+## 2. Arsitektur Sistem 
 - **Bahasa Pemrograman**: Node.js dengan Express
 - **CI/CD Pipeline**    : GitHub Actions
 - **Containerization**  : Docker
+- **VPS**               : Microsoft Azure
 - **Endpoint Publik**   : http://20.232.141.186:3000/health
 
 ## 3. Proses Implementasi CI/CD pada API
