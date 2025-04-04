@@ -1,22 +1,27 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const moment = require('moment-timezone');
+
+const app = express();
+const port = 3000;
 const startTime = Date.now();
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+  res.send('Hello World!');
+});
 
-app.get("/health", (req, res) => {
-    res.json({
-        nama: "Dustin Felix",
-        nrp: "5025231046",
-        status: "UP",
-        timestamp: new Date().toISOString(),
-        uptime: (Date.now() - startTime) / 1000
-    });
+app.get('/health', (req, res) => {
+  const uptimeInSeconds = Math.floor((Date.now() - startTime) / 1000);
+  const uptimeFormatted = new Date(uptimeInSeconds * 1000).toISOString().substr(11, 8); // HH:mm:ss
+
+  res.json({
+    nama: 'Dustin Felix',
+    nrp: '5025231046',
+    status: 'UP',
+    timestamp: moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'),
+    uptime: `${uptimeFormatted}`,
+  });
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
