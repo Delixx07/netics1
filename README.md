@@ -9,6 +9,9 @@
 - **Containerization**  : Docker
 - **VPS**               : Microsoft Azure
 - **Endpoint Publik**   : http://20.232.141.186:3000/health
+- **Docker Image**      : https://hub.docker.com/r/delix07/api-health
+
+
 
 ## 3. Proses Implementasi CI/CD pada API
 ### 3.1. Pembuatan API dengan Node.js
