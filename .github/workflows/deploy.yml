@@ -32,4 +32,4 @@ jobs:
             docker pull delix07/api-health:latest
             docker stop api-health || true
             docker rm api-health || true
-            docker run -d --name api-health -p 3000:3000 delix07/api-health:latest
+            docker run -d --name api-health -p 5000:5000 delix07/api-health:latest
