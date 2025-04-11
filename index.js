@@ -2,7 +2,7 @@ const express = require('express');
 const moment = require('moment-timezone');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 const startTime = Date.now();
 
 app.get('/', (req, res) => {
@@ -14,8 +14,8 @@ app.get('/health', (req, res) => {
   const uptimeFormatted = new Date(uptimeInSeconds * 1000).toISOString().substr(11, 8); // HH:mm:ss
 
   res.json({
-    nama: 'Dustin Felix',
-    nrp: '5025231046',
+    nama: 'Delix',
+    nrp: '5025231000',
     status: 'UP',
     timestamp: moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'),
     uptime: `${uptimeFormatted}`,
