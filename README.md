@@ -41,7 +41,7 @@ Kemudian, saya menjalankan container dengan:
 ```sh
 docker run -p 3000:3000 delix07/api-health:latest
 ```
-Setelah berhasi;, saya mengupload image ke docker hub sebelum digunakan di VPS.
+Setelah berhasil, saya mengupload image ke docker hub sebelum digunakan di VPS.
 
 ### 3.3. Setup VPS
 Saya menggunakan layanan VPS dari Azure dan membuat Virtual Machine berbasis Linux (Ubuntu 20.04 LTS) melalui portal Azure. 
