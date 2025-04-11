@@ -15,7 +15,7 @@ app.get('/health', (req, res) => {
 
   res.json({
     nama: 'Delix',
-    nrp: '5025231000',
+    nrp: '50252310001',
     status: 'UP',
     timestamp: moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'),
     uptime: `${uptimeFormatted}`,
