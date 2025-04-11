@@ -15,7 +15,7 @@
 
 ## 3. Proses Implementasi CI/CD pada API
 ### 3.1. Pembuatan API dengan Node.js
-Saya memulai dengan membuat API sederhana menggunakan Node.js dan Express. API ini memiliki endpoint `/health` yang mengembalikan status server beserta uptime-nya. 
+Saya memulai dengan membuat API sederhana menggunakan Node.js dan Express. API ini memiliki endpoint `/health` yang mengembalikan status server beserta uptime-nya..
 ```sh
 app.get('/health', (req, res) => {
   const uptimeInSeconds = Math.floor((Date.now() - startTime) / 1000);
